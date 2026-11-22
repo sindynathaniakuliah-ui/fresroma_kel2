@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRESROMA — Small Freshness, Big Mood</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        creamBg: '#F7F4EF',
+                        inkDark: '#262320',
+                        inkMuted: '#68625B',
+                        roseSoft: '#E57A9B',
+                        roseBg: '#FDF1F5',
+                        roseBorder: '#F5C6D4',
+                        gardenSoft: '#5A9A3A',
+                        gardenBg: '#F1F8EE',
+                        gardenBorder: '#C7E3B8',
+                        lavenderSoft: '#8A67C4',
+                        lavenderBg: '#F4F0FA',
+                        lavenderBorder: '#D5C7EC',
+                        citrusSoft: '#EA8C28',
+                        citrusBg: '#FFF6EB',
+                        citrusBorder: '#FAD6AC'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F7F4EF;
+            color: #262320;
+        }
+        .clean-card {
+            background-color: #FFFFFF;
+            border: 1px solid rgba(38, 35, 32, 0.08);
+            box-shadow: 0 12px 28px -12px rgba(38, 35, 32, 0.08);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-gardenSoft selection:text-white overflow-x-hidden">
+
+    <!-- STICKY HEADER -->
+    <header class="sticky top-0 z-50 bg-[#F7F4EF]/90 backdrop-blur-md border-b border-inkDark/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+            <!-- FRESROMA SVG LOGO MARK + TAGLINE -->
+            <a href="#" class="flex items-center gap-3 group">
+                <svg class="w-10 h-10 shrink-0 transition-transform duration-200 group-hover:scale-105" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo FRESROMA">
+                    <defs>
+                        <linearGradient id="fresLeafGrad" x1="10" y1="52" x2="50" y2="10" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#2E6B24"/>
+                            <stop offset="55%" stop-color="#5A9A3A"/>
+                            <stop offset="100%" stop-color="#89C952"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="32" cy="32" r="30" fill="#FFFFFF" stroke="#E5DFD5" stroke-width="1.5"/>
+                    <path d="M16 44C18 26 32 14 48 13C46 30 35 43 16 44Z" fill="url(#fresLeafGrad)"/>
+                    <path d="M18 43C27 35 35 27 45 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+                    <path d="M48 16L49.8 21.2L55 23L49.8 24.8L48 30L46.2 24.8L41 23L46.2 21.2L48 16Z" fill="#5A9A3A"/>
+                </svg>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-extrabold text-lg sm:text-xl tracking-tight text-[#2B5922]">FRESROMA<sup class="text-[10px] font-bold ml-0.5">®</sup></span>
+                    </div>
+                    <p class="text-[11px] font-medium text-inkMuted tracking-wide">Small Freshness, Big Mood</p>
+                </div>
+            </a>
+
+            <!-- NAVIGATION LINKS -->
+            <nav class="hidden md:flex items-center gap-6 text-xs lg:text-sm font-semibold text-inkDark/80">
+                <a href="#variant-bar" class="hover:text-gardenSoft transition">4 Varian Mood</a>
+                <a href="#order-configurator" class="hover:text-gardenSoft transition">Konfigurator & Bundling</a>
+                <a href="#operational-tracker" class="hover:text-gardenSoft transition">Alur Proses & Lacak</a>
+                <a href="#catalog-bisnis" class="hover:text-gardenSoft transition">Katalog & Sistem Bisnis</a>
+            </nav>
+
+            <!-- ORDER CTA -->
+            <a href="#order-configurator" class="bg-[#2B5922] hover:bg-gardenSoft text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl shadow-sm transition flex items-center gap-2">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Pesan Sekarang</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="pt-8 pb-8 lg:pt-12 lg:pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="clean-card rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-5">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gardenBg border border-gardenBorder text-xs font-bold text-[#2B5922]">
+                            <i class="fa-solid fa-sparkles text-gardenSoft"></i>
+                            <span>Roll-On 10ml & Nasal Inhaler • #TemaniAktivitasmuDenganFresroma</span>
+                        </div>
+
+                        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-inkDark leading-tight">
+                            Small Freshness, <span class="text-gardenSoft italic">Big Mood</span> di Setiap Langkah.
+                        </h1>
+
+                        <p class="text-sm sm:text-base text-inkMuted leading-relaxed max-w-2xl">
+                            Aromaterapi modern dengan fungsi ganda <strong>Roll-On (untuk kulit)</strong> dan <strong>Nasal Inhaler (untuk pernapasan segar)</strong>. Praktis dibawa ke kampus, ruang kerja, maupun perjalanan untuk mahasiswa dan pekerja muda.
+                        </p>
+
+                        <!-- 4 KEY FEATURES STRIP -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+                            <div class="p-3 rounded-2xl bg-creamBg border border-inkDark/5">
+                                <i class="fa-solid fa-wind text-gardenSoft text-sm mb-1"></i>
+                                <div class="text-xs font-bold text-inkDark">Kesegaran Tahan Lama</div>
+                                <div class="text-[11px] text-inkMuted">Formula seimbang</div>
+                            </div>
+                            <div class="p-3 rounded-2xl bg-creamBg border border-inkDark/5">
+                                <i class="fa-solid fa-repeat text-roseSoft text-sm mb-1"></i>
+                                <div class="text-xs font-bold text-inkDark">Fungsi Ganda</div>
+                                <div class="text-[11px] text-inkMuted">Roll-On & Inhaler</div>
+                            </div>
+                            <div class="p-3 rounded-2xl bg-creamBg border border-inkDark/5">
+                                <i class="fa-solid fa-suitcase text-lavenderSoft text-sm mb-1"></i>
+                                <div class="text-xs font-bold text-inkDark">Portabel & Praktis</div>
+                                <div class="text-[11px] text-inkMuted">Mudah masuk saku/tas</div>
+                            </div>
+                            <div class="p-3 rounded-2xl bg-creamBg border border-inkDark/5">
+                                <i class="fa-solid fa-sun text-citrusSoft text-sm mb-1"></i>
+                                <div class="text-xs font-bold text-inkDark">Segar di Mana Saja</div>
+                                <div class="text-[11px] text-inkMuted">Mulai Rp 15.000</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT HIGHLIGHT: 4 COLOR-CODED VARIANTS PREVIEW -->
+                    <div class="lg:col-span-5 grid grid-cols-2 gap-3.5">
+                        <button type="button" onclick="focusVariant('blooming_rose')" class="text-left p-4 rounded-2xl bg-roseBg border border-roseBorder hover:-translate-y-0.5 transition">
+                            <span class="inline-block w-3 h-3 rounded-full bg-roseSoft mb-2"></span>
+                            <div class="font-bold text-sm text-inkDark">Blooming Rose</div>
+                            <div class="text-[11px] text-inkMuted mt-0.5">Lembut, romantis & menenangkan</div>
+                        </button>
+                        <button type="button" onclick="focusVariant('fresh_garden')" class="text-left p-4 rounded-2xl bg-gardenBg border border-gardenBorder hover:-translate-y-0.5 transition">
+                            <span class="inline-block w-3 h-3 rounded-full bg-gardenSoft mb-2"></span>
+                            <div class="font-bold text-sm text-inkDark">Fresh Garden</div>
+                            <div class="text-[11px] text-inkMuted mt-0.5">Segar botani & jernihkan pikiran</div>
+                        </button>
+                        <button type="button" onclick="focusVariant('lavender_dream')" class="text-left p-4 rounded-2xl bg-lavenderBg border border-lavenderBorder hover:-translate-y-0.5 transition">
+                            <span class="inline-block w-3 h-3 rounded-full bg-lavenderSoft mb-2"></span>
+                            <div class="font-bold text-sm text-inkDark">Lavender Dream</div>
+                            <div class="text-[11px] text-inkMuted mt-0.5">Rileks, anti-stres & nyaman</div>
+                        </button>
+                        <button type="button" onclick="focusVariant('citrus_breeze')" class="text-left p-4 rounded-2xl bg-citrusBg border border-citrusBorder hover:-translate-y-0.5 transition">
+                            <span class="inline-block w-3 h-3 rounded-full bg-citrusSoft mb-2"></span>
+                            <div class="font-bold text-sm text-inkDark">Citrus Breeze</div>
+                            <div class="text-[11px] text-inkMuted mt-0.5">Cerah, energik & boost mood</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLOR-CODED VARIANT SWITCHER BAR -->
+    <section id="variant-bar" class="py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="clean-card rounded-2xl p-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-inkMuted">
+                    <i class="fa-solid fa-palette text-gardenSoft"></i>
+                    <span>Tema Mood Varian Aktif:</span>
+                </div>
+
+                <div id="variantThemeTabs" class="grid grid-cols-2 sm:grid-cols-4 gap-2 flex-1 max-w-3xl">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1) INTERACTIVE ORDER & BUNDLE CONFIGURATOR -->
+    <section id="order-configurator" class="py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-gardenSoft">1. Konfigurator Pesanan & Bundling</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-inkDark mt-1">Atur Varian, Format & Paket Bundling</h2>
+                <p class="text-sm text-inkMuted mt-1">Pilih satuan Roll-On 10ml, Nasal Inhaler, atau paket bundling hemat lengkap dengan kode promo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 items-start">
+                <!-- Left Configurator Controls -->
+                <div class="lg:col-span-7 clean-card rounded-3xl p-6 sm:p-8 space-y-6">
+                    <!-- Format & Variant Selector -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-inkDark mb-3">
+                            Pilih Produk / Paket Bundling
+                        </label>
+                        <div id="configuratorItemsList" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Quantity & Shipping Channel -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-inkDark/10">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-inkDark mb-2">
+                                Jumlah Pesanan
+                            </label>
+                            <div class="flex items-center justify-between bg-creamBg p-2 rounded-2xl border border-inkDark/10">
+                                <button type="button" onclick="adjustQty(-1)" class="w-10 h-10 rounded-xl bg-white hover:bg-inkDark/5 font-bold text-lg text-inkDark transition">
+                                    -
+                                </button>
+                                <div class="text-center">
+                                    <span id="qtyValue" class="font-extrabold text-lg text-inkDark">2</span>
+                                    <span id="qtyUnitText" class="text-[11px] text-inkMuted block">Roll-On 10ml</span>
+                                </div>
+                                <button type="button" onclick="adjustQty(1)" class="w-10 h-10 rounded-xl bg-white hover:bg-inkDark/5 font-bold text-lg text-inkDark transition">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-inkDark mb-2">
+                                Jalur Pengiriman / Kanal
+                            </label>
+                            <select id="shippingChannel" onchange="updatePriceBreakdown()" class="w-full h-[58px] bg-creamBg border border-inkDark/10 rounded-2xl px-4 text-sm font-semibold text-inkDark focus:outline-none focus:border-gardenSoft">
+                                <option value="web">Direct Store (Gratis Ongkir ≥ Rp45.000)</option>
+                                <option value="campus">COD Kampus & Area Kerja (Gratis Ongkir)</option>
+                                <option value="marketplace">Marketplace Official (Shopee / Tokopedia)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Customer Name & Promo Code -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-inkDark/10">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-inkDark mb-2">
+                                Nama Pembeli
+                            </label>
+                            <input type="text" id="buyerName" value="Umay Maisara" class="w-full bg-creamBg border border-inkDark/10 rounded-2xl px-4 py-3 text-sm font-medium text-inkDark focus:outline-none focus:border-gardenSoft">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-inkDark mb-2">
+                                Kode Promo
+                            </label>
+                            <div class="flex gap-2">
+                                <input type="text" id="promoInput" placeholder="FRESROMA20" class="w-full bg-creamBg border border-inkDark/10 rounded-2xl px-4 py-3 text-sm uppercase font-semibold text-inkDark focus:outline-none focus:border-gardenSoft">
+                                <button type="button" onclick="applyPromo()" class="bg-[#2B5922] hover:bg-gardenSoft text-white text-xs font-bold px-4 rounded-2xl transition shrink-0">
+                                    Pakai
+                                </button>
+                            </div>
+                            <p class="text-[11px] text-inkMuted mt-1">
+                                Promo tersedia:
+                                <button type="button" onclick="setPromoPreset('FRESROMA20')" class="font-bold underline text-gardenSoft">FRESROMA20</button> (-20%) atau
+                                <button type="button" onclick="setPromoPreset('TEMANIAKTIVITAS')" class="font-bold underline text-gardenSoft">TEMANIAKTIVITAS</button> (-15%)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Live Price, Discount & Shipping Breakdown -->
+                <div class="lg:col-span-5 clean-card rounded-3xl p-6 sm:p-8 space-y-5 lg:sticky lg:top-24">
+                    <div class="flex items-center justify-between border-b border-inkDark/10 pb-4">
+                        <div>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-gardenSoft">Rincian Pembayaran</span>
+                            <h3 class="font-serif text-xl font-bold text-inkDark">Live Price Breakdown</h3>
+                        </div>
+                        <span id="liveOrderCode" class="text-xs font-bold px-3 py-1 rounded-full bg-gardenBg text-[#2B5922] border border-gardenBorder">
+                            #FRS-101
+                        </span>
+                    </div>
+
+                    <!-- Selected Item Highlight -->
+                    <div id="selectedItemBox" class="p-4 rounded-2xl bg-gardenBg border border-gardenBorder space-y-1.5">
+                        <div class="flex items-center justify-between">
+                            <span id="liveItemTitle" class="font-bold text-sm text-inkDark">Fresh Garden — Roll-On 10ml</span>
+                            <span id="liveItemUnitPrice" class="text-xs font-bold text-[#2B5922]">Rp 15.000</span>
+                        </div>
+                        <p id="liveItemDesc" class="text-xs text-inkMuted">Segar botani & menenangkan untuk aktivitas harian.</p>
+                        <div class="pt-2 flex items-center justify-between text-[11px] text-inkMuted">
+                            <span>Jumlah: <strong id="liveQtyLabel" class="text-inkDark">2 unit</strong></span>
+                            <span>Kanal: <strong id="liveChannelLabel" class="text-inkDark">Direct Store</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Calculation Rows -->
+                    <div class="space-y-2.5 text-sm">
+                        <div class="flex justify-between text-inkMuted">
+                            <span>Subtotal Produk</span>
+                            <span id="calcSubtotal" class="font-semibold text-inkDark">Rp 30.000</span>
+                        </div>
+                        <div id="calcDiscountRow" class="hidden flex justify-between text-gardenSoft font-semibold">
+                            <span>Diskon Promo (<span id="calcPromoCode"></span>)</span>
+                            <span id="calcDiscount">- Rp 0</span>
+                        </div>
+                        <div class="flex justify-between text-inkMuted">
+                            <span>Ongkos Kirim</span>
+                            <span id="calcShipping" class="font-semibold text-inkDark">Rp 8.000</span>
+                        </div>
+                    </div>
+
+                    <!-- Grand Total -->
+                    <div class="pt-4 border-t border-inkDark/15 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-inkMuted block">Total Bayar</span>
+                            <span class="text-[11px] text-gardenSoft font-semibold">Gratis ongkir mulai Rp 45.000</span>
+                        </div>
+                        <span id="calcTotal" class="font-serif text-2xl sm:text-3xl font-extrabold text-inkDark">Rp 38.000</span>
+                    </div>
+
+                    <button type="button" onclick="submitOrderToFlow()" class="w-full bg-[#2B5922] hover:bg-gardenSoft text-white font-bold text-sm py-3.5 rounded-2xl shadow-md transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>Konfirmasi Pesanan & Lacak Proses</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2) 6-STEP OPERATIONAL & DELIVERY STATUS TRACKER -->
+    <section id="operational-tracker" class="py-10 bg-white/60 border-t border-b border-inkDark/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-end justify-between gap-4 mb-6">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-gardenSoft">2. Pelacakan Alur Operasional & Pengiriman</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-inkDark mt-1">Status 6 Tahap Proses FRESROMA</h2>
+                    <p class="text-sm text-inkMuted mt-1">Klik tombol untuk memajukan tahap proses secara interaktif atau reset ke tahap awal.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                    <button type="button" onclick="resetProcessStage()" class="bg-white hover:bg-creamBg text-inkDark border border-inkDark/15 text-xs font-bold px-4 py-2.5 rounded-xl transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        <span>Reset</span>
+                    </button>
+                    <button type="button" onclick="advanceProcessStage()" class="bg-[#2B5922] hover:bg-gardenSoft text-white text-xs font-bold px-5 py-2.5 rounded-xl shadow-sm transition flex items-center gap-2">
+                        <span>Tahap Berikutnya</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="clean-card rounded-3xl p-6 sm:p-8 space-y-6">
+                <!-- Order Status Header -->
+                <div class="flex flex-wrap items-center justify-between gap-4 pb-5 border-b border-inkDark/10">
+                    <div>
+                        <div class="flex items-center gap-2.5">
+                            <span id="trackerOrderBadge" class="font-extrabold text-base text-inkDark">Pesanan #FRS-101</span>
+                            <span id="trackerStepPill" class="text-xs font-bold px-3 py-0.5 rounded-full bg-gardenBg text-[#2B5922] border border-gardenBorder">
+                                Tahap 1 / 6
+                            </span>
+                        </div>
+                        <p id="trackerOrderMeta" class="text-xs text-inkMuted mt-1">Pembeli: Umay Maisara • Fresh Garden — Roll-On 10ml (2 unit)</p>
+                    </div>
+                    <div class="text-left sm:text-right">
+                        <span class="text-[11px] text-inkMuted block">Tahap Aktif</span>
+                        <strong id="trackerActiveLabel" class="text-sm font-bold text-[#2B5922]">01. Pengadaan Bahan Baku</strong>
+                    </div>
+                </div>
+
+                <!-- 6 Steps Grid -->
+                <div id="sixStepsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3.5">
+                    <!-- Rendered by JS -->
+                </div>
+
+                <!-- Active Stage Detail Box -->
+                <div class="p-4 rounded-2xl bg-creamBg border border-inkDark/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                        <h4 id="activeStepDetailTitle" class="font-bold text-sm text-inkDark">01. Pengadaan Bahan Baku</h4>
+                        <p id="activeStepDetailDesc" class="text-xs text-inkMuted mt-0.5">Pengadaan dan verifikasi essential oil, carrier oil, botol roll-on 10ml, dan komponen nasal inhaler.</p>
+                    </div>
+                    <span id="activeStepBadge" class="text-xs font-bold px-3 py-1.5 rounded-xl bg-white border border-inkDark/10 text-inkDark shrink-0">
+                        Tim Operasional FRESROMA
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3) FILTERABLE PRODUCT CATALOG + SISTEM INFORMASI BISNIS TABS -->
+    <section id="catalog-bisnis" class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+            <!-- PART A: FILTERABLE CATALOG -->
+            <div>
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-gardenSoft">3A. Katalog Produk & Varian</span>
+                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-inkDark mt-1">Katalog Varian & Bundling FRESROMA</h2>
+                        <p class="text-sm text-inkMuted mt-1">Filter berdasarkan varian aroma, format produk, atau paket bundling.</p>
+                    </div>
+
+                    <div id="catalogFilterButtons" class="flex flex-wrap gap-2">
+                        <button type="button" onclick="filterCatalogItems('all')" data-cat="all" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-[#2B5922] text-white transition">
+                            Semua
+                        </button>
+                        <button type="button" onclick="filterCatalogItems('blooming_rose')" data-cat="blooming_rose" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-roseBg text-inkDark border border-roseBorder hover:opacity-85 transition">
+                            Blooming Rose
+                        </button>
+                        <button type="button" onclick="filterCatalogItems('fresh_garden')" data-cat="fresh_garden" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-gardenBg text-inkDark border border-gardenBorder hover:opacity-85 transition">
+                            Fresh Garden
+                        </button>
+                        <button type="button" onclick="filterCatalogItems('lavender_dream')" data-cat="lavender_dream" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-lavenderBg text-inkDark border border-lavenderBorder hover:opacity-85 transition">
+                            Lavender Dream
+                        </button>
+                        <button type="button" onclick="filterCatalogItems('citrus_breeze')" data-cat="citrus_breeze" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-citrusBg text-inkDark border border-citrusBorder hover:opacity-85 transition">
+                            Citrus Breeze
+                        </button>
+                        <button type="button" onclick="filterCatalogItems('bundle')" data-cat="bundle" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-inkDark border border-inkDark/15 hover:bg-creamBg transition">
+                            Bundle Pack
+                        </button>
+                    </div>
+                </div>
+
+                <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+
+            <!-- PART B: SISTEM INFORMASI BISNIS (INVENTARIS, PELANGGAN, PENJUALAN & BEP) -->
+            <div class="pt-4">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-gardenSoft">3B. Sistem Informasi Bisnis</span>
+                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-inkDark mt-1">Inventaris, Pelanggan & Laporan Penjualan (BEP)</h2>
+                        <p class="text-sm text-inkMuted mt-1">Pantau stok bahan baku & kemasan, basis data pelanggan, serta simulasi titik impas (BEP 100 unit / Rp1.500.000, target 200 unit).</p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" onclick="switchInfoTab('inventory')" id="infoTab-inventory" class="info-tab px-4 py-2.5 rounded-xl text-xs font-bold bg-[#2B5922] text-white transition">
+                            Inventaris Bahan Baku & Kemasan
+                        </button>
+                        <button type="button" onclick="switchInfoTab('customers')" id="infoTab-customers" class="info-tab px-4 py-2.5 rounded-xl text-xs font-bold bg-white text-inkDark border border-inkDark/15 hover:bg-creamBg transition">
+                            Basis Data Pelanggan
+                        </button>
+                        <button type="button" onclick="switchInfoTab('sales')" id="infoTab-sales" class="info-tab px-4 py-2.5 rounded-xl text-xs font-bold bg-white text-inkDark border border-inkDark/15 hover:bg-creamBg transition">
+                            Laporan Penjualan & BEP
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TAB 1: INVENTARIS BAHAN BAKU & KEMASAN -->
+                <div id="infoPanel-inventory" class="info-panel clean-card rounded-3xl p-6 space-y-5">
+                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-inkDark/10 pb-4">
+                        <h3 class="font-bold text-base text-inkDark">Stok Bahan Baku & Kemasan Aktif</h3>
+                        <span class="text-xs font-semibold text-inkMuted">Terintegrasi dengan Alur Pengadaan & Produksi</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="p-4 rounded-2xl bg-roseBg border border-roseBorder space-y-2">
+                            <div class="flex justify-between text-xs font-bold">
+                                <span>Rose Essential Oil</span>
+                                <span class="text-roseSoft">Stok Aman</span>
+                            </div>
+                            <div class="text-xl font-extrabold text-inkDark">1.250 ml</div>
+                            <p class="text-[11px] text-inkMuted">Untuk varian Blooming Rose</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-gardenBg border border-gardenBorder space-y-2">
+                            <div class="flex justify-between text-xs font-bold">
+                                <span>Botanical & Mint Oil</span>
+                                <span class="text-gardenSoft">Stok Aman</span>
+                            </div>
+                            <div class="text-xl font-extrabold text-inkDark">1.600 ml</div>
+                            <p class="text-[11px] text-inkMuted">Untuk Fresh Garden & Inhaler</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-lavenderBg border border-lavenderBorder space-y-2">
+                            <div class="flex justify-between text-xs font-bold">
+                                <span>Lavender Oil</span>
+                                <span class="text-lavenderSoft">Stok Aman</span>
+                            </div>
+                            <div class="text-xl font-extrabold text-inkDark">1.100 ml</div>
+                            <p class="text-[11px] text-inkMuted">Untuk varian Lavender Dream</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-citrusBg border border-citrusBorder space-y-2">
+                            <div class="flex justify-between text-xs font-bold">
+                                <span>Botol Roll-On & Box</span>
+                                <span class="text-citrusSoft">Perlu Restock</span>
+                            </div>
+                            <div class="text-xl font-extrabold text-inkDark">245 Set</div>
+                            <p class="text-[11px] text-inkMuted">Botol 10ml, inhaler & box cetak</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: BASIS DATA PELANGGAN -->
+                <div id="infoPanel-customers" class="info-panel hidden clean-card rounded-3xl p-6 space-y-4">
+                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-inkDark/10 pb-4">
+                        <h3 class="font-bold text-base text-inkDark">Basis Data Pelanggan Terstruktur</h3>
+                        <span class="text-xs font-semibold text-gardenSoft">Fokus: Mahasiswa & Pekerja Muda</span>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs">
+                            <thead>
+                                <tr class="border-b border-inkDark/10 text-inkMuted uppercase">
+                                    <th class="py-3 px-3">Pelanggan</th>
+                                    <th class="py-3 px-3">Segmen</th>
+                                    <th class="py-3 px-3">Varian Favorit</th>
+                                    <th class="py-3 px-3">Total Order</th>
+                                    <th class="py-3 px-3">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-inkDark/10">
+                                <tr>
+                                    <td class="py-3 px-3 font-bold text-inkDark">Umay Maisara</td>
+                                    <td class="py-3 px-3 text-inkMuted">Mahasiswa (21 th)</td>
+                                    <td class="py-3 px-3"><span class="px-2.5 py-0.5 rounded-full bg-gardenBg text-[#2B5922] font-semibold">Fresh Garden</span></td>
+                                    <td class="py-3 px-3 font-semibold">4 Transaksi</td>
+                                    <td class="py-3 px-3 text-gardenSoft font-bold">Repeat Buyer</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-3 font-bold text-inkDark">Priska Andini</td>
+                                    <td class="py-3 px-3 text-inkMuted">Pekerja Muda (24 th)</td>
+                                    <td class="py-3 px-3"><span class="px-2.5 py-0.5 rounded-full bg-lavenderBg text-lavenderSoft font-semibold">Lavender Dream</span></td>
+                                    <td class="py-3 px-3 font-semibold">3 Transaksi</td>
+                                    <td class="py-3 px-3 text-gardenSoft font-bold">Aktif</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-3 font-bold text-inkDark">Sindy Nathania</td>
+                                    <td class="py-3 px-3 text-inkMuted">Mahasiswa (19 th)</td>
+                                    <td class="py-3 px-3"><span class="px-2.5 py-0.5 rounded-full bg-roseBg text-roseSoft font-semibold">Blooming Rose</span></td>
+                                    <td class="py-3 px-3 font-semibold">2 Transaksi</td>
+                                    <td class="py-3 px-3 text-inkMuted font-semibold">Member</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-3 font-bold text-inkDark">Deanova Ega</td>
+                                    <td class="py-3 px-3 text-inkMuted">Pekerja Muda (26 th)</td>
+                                    <td class="py-3 px-3"><span class="px-2.5 py-0.5 rounded-full bg-citrusBg text-citrusSoft font-semibold">Citrus Breeze</span></td>
+                                    <td class="py-3 px-3 font-semibold">5 Transaksi</td>
+                                    <td class="py-3 px-3 text-gardenSoft font-bold">VIP Bundling</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- TAB 3: LAPORAN PENJUALAN & BREAK-EVEN POINT (BEP) -->
+                <div id="infoPanel-sales" class="info-panel hidden clean-card rounded-3xl p-6 space-y-6">
+                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-inkDark/10 pb-4">
+                        <div>
+                            <h3 class="font-bold text-base text-inkDark">Laporan Penjualan & Break-Even Point (BEP)</h3>
+                            <p class="text-xs text-inkMuted mt-0.5">Titik Impas (BEP): <strong>100 unit / Rp 1.500.000</strong> • Target Bulanan: <strong>200 unit (Rp 3.000.000)</strong></p>
+                        </div>
+                        <span id="bepBadge" class="text-xs font-bold px-3 py-1 rounded-full bg-gardenBg text-[#2B5922] border border-gardenBorder">
+                            Target Tercapai (200 Unit)
+                        </span>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <!-- Interactive Unit Slider -->
+                        <div class="lg:col-span-6 space-y-4">
+                            <div class="flex items-center justify-between text-xs font-bold">
+                                <span>Simulasi Unit Terjual / Bulan:</span>
+                                <span id="bepUnitsDisplay" class="text-base text-gardenSoft">200 Unit</span>
+                            </div>
+                            <input type="range" id="bepSlider" min="0" max="300" step="10" value="200" oninput="calculateBepSim(this.value)" class="w-full accent-[#5A9A3A] cursor-pointer">
+                            <div class="flex justify-between text-[11px] text-inkMuted">
+                                <span>0 Unit</span>
+                                <span>BEP: 100 Unit</span>
+                                <span>Target: 200 Unit</span>
+                                <span>300 Unit</span>
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-3 pt-2">
+                                <div class="p-3 rounded-2xl bg-creamBg">
+                                    <span class="text-[11px] text-inkMuted block">Pendapatan</span>
+                                    <strong id="bepRevenue" class="text-sm font-extrabold text-inkDark">Rp 3.000.000</strong>
+                                </div>
+                                <div class="p-3 rounded-2xl bg-creamBg">
+                                    <span class="text-[11px] text-inkMuted block">Biaya Tetap</span>
+                                    <strong class="text-sm font-extrabold text-inkDark">Rp 700.000</strong>
+                                </div>
+                                <div class="p-3 rounded-2xl bg-gardenBg border border-gardenBorder">
+                                    <span class="text-[11px] text-inkMuted block">Laba / (Rugi)</span>
+                                    <strong id="bepProfit" class="text-sm font-extrabold text-[#2B5922]">+ Rp 700.000</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Sales Log Table -->
+                        <div class="lg:col-span-6 overflow-x-auto">
+                            <table class="w-full text-left text-xs">
+                                <thead>
+                                    <tr class="border-b border-inkDark/10 text-inkMuted uppercase">
+                                        <th class="py-2.5 px-2">ID</th>
+                                        <th class="py-2.5 px-2">Pembeli</th>
+                                        <th class="py-2.5 px-2">Item</th>
+                                        <th class="py-2.5 px-2">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="salesLogBody" class="divide-y divide-inkDark/10">
+                                    <!-- Rendered & updated dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-inkDark text-white/80 py-8 border-t border-inkDark/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <div class="flex items-center gap-2.5">
+                <span class="font-extrabold text-white tracking-wide">FRESROMA®</span>
+                <span class="text-white/50">•</span>
+                <span>Small Freshness, Big Mood</span>
+            </div>
+            <p class="text-white/60 text-center sm:text-right">
+                Prototype UI Interaktif FRESROMA • Blooming Rose, Fresh Garden, Lavender Dream & Citrus Breeze
+            </p>
+        </div>
+    </footer>
+
+    <!-- TOAST CONTAINER -->
+    <div id="toastArea" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <script>
+        // --- VARIANT THEMES DATA ---
+        const VARIANT_THEMES = [
+            {
+                id: 'blooming_rose',
+                name: 'Blooming Rose',
+                mood: 'Lembut & Menenangkan',
+                dotClass: 'bg-roseSoft',
+                activeClass: 'bg-roseBg border-roseSoft text-inkDark ring-2 ring-roseSoft/30',
+                idleClass: 'bg-roseBg/60 border-roseBorder text-inkDark/80 hover:bg-roseBg'
+            },
+            {
+                id: 'fresh_garden',
+                name: 'Fresh Garden',
+                mood: 'Segar Botani & Fokus',
+                dotClass: 'bg-gardenSoft',
+                activeClass: 'bg-gardenBg border-gardenSoft text-inkDark ring-2 ring-gardenSoft/30',
+                idleClass: 'bg-gardenBg/60 border-gardenBorder text-inkDark/80 hover:bg-gardenBg'
+            },
+            {
+                id: 'lavender_dream',
+                name: 'Lavender Dream',
+                mood: 'Rileks & Anti-Stres',
+                dotClass: 'bg-lavenderSoft',
+                activeClass: 'bg-lavenderBg border-lavenderSoft text-inkDark ring-2 ring-lavenderSoft/30',
+                idleClass: 'bg-lavenderBg/60 border-lavenderBorder text-inkDark/80 hover:bg-lavenderBg'
+            },
+            {
+                id: 'citrus_breeze',
+                name: 'Citrus Breeze',
+                mood: 'Cerah & Boost Mood',
+                dotClass: 'bg-citrusSoft',
+                activeClass: 'bg-citrusBg border-citrusSoft text-inkDark ring-2 ring-citrusSoft/30',
+                idleClass: 'bg-citrusBg/60 border-citrusBorder text-inkDark/80 hover:bg-citrusBg'
+            }
+        ];
+
+        // --- PRODUCTS & BUNDLE PACKS DATA ---
+        const CATALOG_ITEMS = [
+            {
+                id: 'rose_rollon',
+                name: 'Blooming Rose — Roll-On 10ml',
+                variant: 'blooming_rose',
+                category: 'blooming_rose',
+                formatLabel: 'Roll-On 10ml',
+                price: 15000,
+                badge: 'Blooming Rose',
+                cardBg: 'bg-roseBg',
+                borderClass: 'border-roseBorder',
+                accentColor: 'text-roseSoft',
+                desc: 'Aroma mawar lembut dengan sentuhan menenangkan untuk menjaga mood tetap manis seharian.'
+            },
+            {
+                id: 'rose_inhaler',
+                name: 'Blooming Rose — Nasal Inhaler',
+                variant: 'blooming_rose',
+                category: 'blooming_rose',
+                formatLabel: 'Nasal Inhaler',
+                price: 15000,
+                badge: 'Blooming Rose • Inhaler',
+                cardBg: 'bg-roseBg',
+                borderClass: 'border-roseBorder',
+                accentColor: 'text-roseSoft',
+                desc: 'Hirupan aroma mawar segar praktis saat butuh jeda napas tenang di tengah aktivitas.'
+            },
+            {
+                id: 'garden_rollon',
+                name: 'Fresh Garden — Roll-On 10ml',
+                variant: 'fresh_garden',
+                category: 'fresh_garden',
+                formatLabel: 'Roll-On 10ml',
+                price: 15000,
+                badge: 'Fresh Garden',
+                cardBg: 'bg-gardenBg',
+                borderClass: 'border-gardenBorder',
+                accentColor: 'text-gardenSoft',
+                desc: 'Kesegaran daun hijau alami dan herbal yang membantu fokus belajar serta kerja.'
+            },
+            {
+                id: 'garden_inhaler',
+                name: 'Fresh Garden — Nasal Inhaler',
+                variant: 'fresh_garden',
+                category: 'fresh_garden',
+                formatLabel: 'Nasal Inhaler',
+                price: 15000,
+                badge: 'Fresh Garden • Inhaler',
+                cardBg: 'bg-gardenBg',
+                borderClass: 'border-gardenBorder',
+                accentColor: 'text-gardenSoft',
+                desc: 'Sensasi segar botani instan untuk mengusir kantuk saat kuliah atau lembur.'
+            },
+            {
+                id: 'lavender_rollon',
+                name: 'Lavender Dream — Roll-On 10ml',
+                variant: 'lavender_dream',
+                category: 'lavender_dream',
+                formatLabel: 'Roll-On 10ml',
+                price: 15000,
+                badge: 'Lavender Dream',
+                cardBg: 'bg-lavenderBg',
+                borderClass: 'border-lavenderBorder',
+                accentColor: 'text-lavenderSoft',
+                desc: 'Aroma lavender lembut untuk membantu meredakan stres kantor dan membuat pikiran rileks.'
+            },
+            {
+                id: 'lavender_inhaler',
+                name: 'Lavender Dream — Nasal Inhaler',
+                variant: 'lavender_dream',
+                category: 'lavender_dream',
+                formatLabel: 'Nasal Inhaler',
+                price: 15000,
+                badge: 'Lavender Dream • Inhaler',
+                cardBg: 'bg-lavenderBg',
+                borderClass: 'border-lavenderBorder',
+                accentColor: 'text-lavenderSoft',
+                desc: 'Inhaler lavender ringkas untuk menenangkan diri sebelum presentasi atau istirahat.'
+            },
+            {
+                id: 'citrus_rollon',
+                name: 'Citrus Breeze — Roll-On 10ml',
+                variant: 'citrus_breeze',
+                category: 'citrus_breeze',
+                formatLabel: 'Roll-On 10ml',
+                price: 15000,
+                badge: 'Citrus Breeze',
+                cardBg: 'bg-citrusBg',
+                borderClass: 'border-citrusBorder',
+                accentColor: 'text-citrusSoft',
+                desc: 'Kesegaran jeruk citrus yang cerah dan energik untuk membangkitkan semangat.'
+            },
+            {
+                id: 'citrus_inhaler',
+                name: 'Citrus Breeze — Nasal Inhaler',
+                variant: 'citrus_breeze',
+                category: 'citrus_breeze',
+                formatLabel: 'Nasal Inhaler',
+                price: 15000,
+                badge: 'Citrus Breeze • Inhaler',
+                cardBg: 'bg-citrusBg',
+                borderClass: 'border-citrusBorder',
+                accentColor: 'text-citrusSoft',
+                desc: 'Boost kesegaran citrus cepat kapan saja saat energi mulai menurun.'
+            },
+            {
+                id: 'bundle_duo_mood',
+                name: 'Duo Mood Bundle (Roll-On + Inhaler)',
+                variant: 'fresh_garden',
+                category: 'bundle',
+                formatLabel: 'Paket Bundling (2 Pcs)',
+                price: 27000,
+                badge: 'Bundle Pack • Hemat',
+                cardBg: 'bg-white',
+                borderClass: 'border-gardenBorder',
+                accentColor: 'text-gardenSoft',
+                desc: 'Kombinasi 1 Roll-On 10ml + 1 Nasal Inhaler sesuai varian mood pilihanmu.'
+            },
+            {
+                id: 'bundle_quad_mood',
+                name: '4-Mood Complete Bundle Pack',
+                variant: 'citrus_breeze',
+                category: 'bundle',
+                formatLabel: 'Bundle 4 Varian',
+                price: 52000,
+                badge: 'Bundle Pack • Lengkap',
+                cardBg: 'bg-white',
+                borderClass: 'border-citrusBorder',
+                accentColor: 'text-citrusSoft',
+                desc: 'Paket lengkap 4 varian (Blooming Rose, Fresh Garden, Lavender Dream, Citrus Breeze).'
+            }
+        ];
+
+        // --- 6 OPERATIONAL & DELIVERY STAGES ---
+        const SIX_STEPS = [
+            {
+                num: '01',
+                short: 'Pengadaan Bahan Baku',
+                title: '01. Pengadaan Bahan Baku',
+                desc: 'Pengadaan dan verifikasi essential oil, carrier oil aman kulit, botol roll-on 10ml, dan komponen nasal inhaler.',
+                team: 'Divisi Pengadaan & Bahan Baku'
+            },
+            {
+                num: '02',
+                short: 'Produksi Terstandar',
+                title: '02. Produksi Terstandar',
+                desc: 'Formulasi dan pengisian roll-on serta nasal inhaler sesuai standar takaran dan kebersihan terukur.',
+                team: 'Divisi Produksi FRESROMA'
+            },
+            {
+                num: '03',
+                short: 'Kendali Kualitas (QC)',
+                title: '03. Kendali Kualitas (QC)',
+                desc: 'Pemeriksaan mutu aroma, kerapatan tutup, bola roll-on, dan keamanan produk sebelum dikemas.',
+                team: 'Tim Quality Control'
+            },
+            {
+                num: '04',
+                short: 'Packaging & Pelabelan',
+                title: '04. Packaging & Pelabelan',
+                desc: 'Pemasangan label varian (Blooming Rose, Fresh Garden, Lavender Dream, Citrus Breeze) dan pengemasan box.',
+                team: 'Divisi Kemasan & Stok'
+            },
+            {
+                num: '05',
+                short: 'Distribusi & Pengiriman',
+                title: '05. Distribusi & Pengiriman',
+                desc: 'Pengiriman pesanan melalui ekspedisi, COD kampus/kantor, atau kanal marketplace resmi.',
+                team: 'Tim Logistik & Distribusi'
+            },
+            {
+                num: '06',
+                short: 'Pesanan Diterima',
+                title: '06. Pesanan Diterima',
+                desc: 'Pesanan telah sampai di tangan pembeli. Siap menemani aktivitas dengan kesegaran setiap hari!',
+                team: 'Selesai • Layanan Pelanggan'
+            }
+        ];
+
+        // --- INITIAL SALES LOG ---
+        const SALES_LOG = [
+            { id: '#FRS-101', buyer: 'Umay Maisara', item: 'Fresh Garden Roll-On (2x)', total: 'Rp 38.000' },
+            { id: '#FRS-100', buyer: 'Priska Andini', item: '4-Mood Complete Bundle (1x)', total: 'Rp 52.000' },
+            { id: '#FRS-099', buyer: 'Sindy Nathania', item: 'Blooming Rose Inhaler (2x)', total: 'Rp 30.000' },
+            { id: '#FRS-098', buyer: 'Deanova Ega', item: 'Duo Mood Bundle (2x)', total: 'Rp 54.000' }
+        ];
+
+        // --- APP STATE ---
+        let activeVariantId = 'fresh_garden';
+        let selectedItemId = 'garden_rollon';
+        let currentQty = 2;
+        let activePromo = null; // { code: 'FRESROMA20', rate: 0.20 }
+        let currentStepIdx = 0;
+        let orderSeq = 101;
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderVariantThemeTabs();
+            renderConfiguratorItems();
+            updatePriceBreakdown();
+            renderSixSteps();
+            renderCatalogGrid('all');
+            renderSalesLog();
+            calculateBepSim(200);
+        });
+
+        // --- VARIANT THEME BAR ---
+        function renderVariantThemeTabs() {
+            const wrap = document.getElementById('variantThemeTabs');
+            wrap.innerHTML = VARIANT_THEMES.map(v => {
+                const isSelected = v.id === activeVariantId;
+                return `
+                    <button type="button" onclick="focusVariant('${v.id}')" class="px-3 py-2 rounded-xl border text-left transition flex items-center gap-2 ${isSelected ? v.activeClass : v.idleClass}">
+                        <span class="w-2.5 h-2.5 rounded-full shrink-0 ${v.dotClass}"></span>
+                        <span class="text-xs font-bold truncate">${v.name}</span>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function focusVariant(variantId) {
+            activeVariantId = variantId;
+            renderVariantThemeTabs();
+
+            // Select matching roll-on item for that variant if available
+            const matchItem = CATALOG_ITEMS.find(item => item.variant === variantId && item.category !== 'bundle');
+            if (matchItem) {
+                selectedItemId = matchItem.id;
+                document.getElementById('qtyUnitText').innerText = matchItem.formatLabel;
+            }
+            renderConfiguratorItems();
+            updatePriceBreakdown();
+        }
+
+        // --- 1) ORDER & BUNDLE CONFIGURATOR ---
+        function renderConfiguratorItems() {
+            const container = document.getElementById('configuratorItemsList');
+            const itemsForConfig = CATALOG_ITEMS.filter(i => i.variant === activeVariantId || i.category === 'bundle');
+
+            container.innerHTML = itemsForConfig.map(item => {
+                const selected = item.id === selectedItemId;
+                return `
+                    <div onclick="pickConfigItem('${item.id}')" class="p-3.5 rounded-2xl border cursor-pointer transition flex items-start justify-between gap-2 ${
+                        selected
+                            ? 'bg-creamBg border-inkDark ring-2 ring-inkDark/15'
+                            : 'bg-white border-inkDark/10 hover:border-inkDark/30'
+                    }">
+                        <div class="min-w-0">
+                            <span class="text-[10px] font-bold uppercase tracking-wider ${item.accentColor}">${item.badge}</span>
+                            <h4 class="font-bold text-xs text-inkDark truncate mt-0.5">${item.name}</h4>
+                            <p class="text-[11px] text-inkMuted truncate">${item.formatLabel}</p>
+                        </div>
+                        <span class="text-xs font-extrabold text-inkDark shrink-0">Rp ${item.price.toLocaleString('id-ID')}</span>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function pickConfigItem(itemId) {
+            selectedItemId = itemId;
+            const item = CATALOG_ITEMS.find(i => i.id === itemId);
+            if (item) {
+                document.getElementById('qtyUnitText').innerText = item.formatLabel;
+            }
+            renderConfiguratorItems();
+            updatePriceBreakdown();
+        }
+
+        function adjustQty(delta) {
+            if (currentQty + delta >= 1) {
+                currentQty += delta;
+                document.getElementById('qtyValue').innerText = currentQty;
+                updatePriceBreakdown();
+            } else {
+                showToast('Jumlah minimal 1 item.');
+            }
+        }
+
+        function setPromoPreset(code) {
+            document.getElementById('promoInput').value = code;
+            applyPromo();
+        }
+
+        function applyPromo() {
+            const code = document.getElementById('promoInput').value.trim().toUpperCase();
+            if (code === 'FRESROMA20') {
+                activePromo = { code: 'FRESROMA20', rate: 0.20 };
+                showToast('Promo FRESROMA20 (diskon 20%) aktif!');
+            } else if (code === 'TEMANIAKTIVITAS') {
+                activePromo = { code: 'TEMANIAKTIVITAS', rate: 0.15 };
+                showToast('Promo TEMANIAKTIVITAS (diskon 15%) aktif!');
+            } else {
+                activePromo = null;
+                showToast('Gunakan kode FRESROMA20 atau TEMANIAKTIVITAS.');
+            }
+            updatePriceBreakdown();
+        }
+
+        function updatePriceBreakdown() {
+            const item = CATALOG_ITEMS.find(i => i.id === selectedItemId) || CATALOG_ITEMS[0];
+            const channelSelect = document.getElementById('shippingChannel');
+            const channelKey = channelSelect.value;
+            const channelShort = channelSelect.options[channelSelect.selectedIndex].text.split(' (')[0];
+
+            const subtotal = item.price * currentQty;
+            const discountAmount = activePromo ? Math.round(subtotal * activePromo.rate) : 0;
+            const discountedSubtotal = subtotal - discountAmount;
+
+            // Free shipping if subtotal >= 45,000 or campus/work COD
+            const shippingCost = (channelKey === 'campus' || discountedSubtotal >= 45000) ? 0 : 8000;
+            const total = Math.max(0, discountedSubtotal + shippingCost);
+
+            const box = document.getElementById('selectedItemBox');
+            box.className = `p-4 rounded-2xl ${item.cardBg} border ${item.borderClass} space-y-1.5`;
+
+            document.getElementById('liveItemTitle').innerText = item.name;
+            document.getElementById('liveItemUnitPrice').innerText = `Rp ${item.price.toLocaleString('id-ID')}`;
+            document.getElementById('liveItemDesc').innerText = item.desc;
+            document.getElementById('liveQtyLabel').innerText = `${currentQty} ${item.formatLabel}`;
+            document.getElementById('liveChannelLabel').innerText = channelShort;
+
+            document.getElementById('calcSubtotal').innerText = `Rp ${subtotal.toLocaleString('id-ID')}`;
+
+            const discountRow = document.getElementById('calcDiscountRow');
+            if (activePromo) {
+                discountRow.classList.remove('hidden');
+                document.getElementById('calcPromoCode').innerText = `${activePromo.code} ${Math.round(activePromo.rate * 100)}%`;
+                document.getElementById('calcDiscount').innerText = `- Rp ${discountAmount.toLocaleString('id-ID')}`;
+            } else {
+                discountRow.classList.add('hidden');
+            }
+
+            document.getElementById('calcShipping').innerText = shippingCost === 0 ? 'GRATIS' : `Rp ${shippingCost.toLocaleString('id-ID')}`;
+            document.getElementById('calcTotal').innerText = `Rp ${total.toLocaleString('id-ID')}`;
+        }
+
+        function submitOrderToFlow() {
+            const item = CATALOG_ITEMS.find(i => i.id === selectedItemId) || CATALOG_ITEMS[0];
+            const buyer = document.getElementById('buyerName').value.trim() || 'Pelanggan FRESROMA';
+            const totalStr = document.getElementById('calcTotal').innerText;
+
+            orderSeq += 1;
+            const newId = `#FRS-${orderSeq}`;
+
+            document.getElementById('liveOrderCode').innerText = newId;
+            document.getElementById('trackerOrderBadge').innerText = `Pesanan ${newId}`;
+            document.getElementById('trackerOrderMeta').innerText = `Pembeli: ${buyer} • ${item.name} (${currentQty}x)`;
+
+            currentStepIdx = 0;
+            renderSixSteps();
+
+            SALES_LOG.unshift({
+                id: newId,
+                buyer: buyer,
+                item: `${item.name} (${currentQty}x)`,
+                total: totalStr
+            });
+            renderSalesLog();
+
+            showToast(`Pesanan ${newId} dibuat & masuk pelacakan 6 tahap!`);
+            document.getElementById('operational-tracker').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // --- 2) 6-STEP OPERATIONAL & DELIVERY TRACKER ---
+        function renderSixSteps() {
+            const grid = document.getElementById('sixStepsGrid');
+            grid.innerHTML = SIX_STEPS.map((st, idx) => {
+                const done = idx < currentStepIdx;
+                const active = idx === currentStepIdx;
+
+                let cls = 'bg-creamBg border-inkDark/10 text-inkMuted';
+                let badgeCls = 'bg-white text-inkMuted border border-inkDark/10';
+                let statusText = 'Menunggu';
+
+                if (done) {
+                    cls = 'bg-gardenBg border-gardenBorder text-inkDark';
+                    badgeCls = 'bg-gardenSoft text-white';
+                    statusText = 'Selesai';
+                } else if (active) {
+                    cls = 'bg-white border-inkDark ring-2 ring-inkDark/15 text-inkDark';
+                    badgeCls = 'bg-[#2B5922] text-white';
+                    statusText = 'Sedang Berjalan';
+                }
+
+                return `
+                    <button type="button" onclick="selectProcessStep(${idx})" class="text-left p-4 rounded-2xl border transition flex flex-col justify-between gap-3 ${cls}">
+                        <div class="flex items-center justify-between w-full">
+                            <span class="text-[11px] font-extrabold px-2.5 py-0.5 rounded-lg ${badgeCls}">${st.num}</span>
+                            ${done ? '<i class="fa-solid fa-circle-check text-gardenSoft text-sm"></i>' : (active ? '<i class="fa-solid fa-spinner fa-spin text-[#2B5922] text-xs"></i>' : '<i class="fa-regular fa-circle text-inkMuted/50 text-xs"></i>')}
+                        </div>
+                        <div>
+                            <div class="font-bold text-xs leading-snug">${st.short}</div>
+                            <div class="text-[10px] mt-1 font-medium opacity-80">${statusText}</div>
+                        </div>
+                    </button>
+                `;
+            }).join('');
+
+            const activeStep = SIX_STEPS[currentStepIdx];
+            document.getElementById('trackerStepPill').innerText = `Tahap ${currentStepIdx + 1} / 6`;
+            document.getElementById('trackerActiveLabel').innerText = activeStep.title;
+            document.getElementById('activeStepDetailTitle').innerText = activeStep.title;
+            document.getElementById('activeStepDetailDesc').innerText = activeStep.desc;
+            document.getElementById('activeStepBadge').innerText = activeStep.team;
+        }
+
+        function selectProcessStep(idx) {
+            currentStepIdx = idx;
+            renderSixSteps();
+        }
+
+        function advanceProcessStage() {
+            currentStepIdx = (currentStepIdx + 1) % SIX_STEPS.length;
+            renderSixSteps();
+            showToast(`Tahap aktif: ${SIX_STEPS[currentStepIdx].title}`);
+        }
+
+        function resetProcessStage() {
+            currentStepIdx = 0;
+            renderSixSteps();
+            showToast('Proses dikembalikan ke Tahap 01.');
+        }
+
+        // --- 3A) FILTERABLE CATALOG ---
+        function filterCatalogItems(cat) {
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                const isActive = btn.dataset.cat === cat;
+                if (cat === 'all') {
+                    btn.className = isActive
+                        ? 'cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-[#2B5922] text-white transition'
+                        : 'cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-inkDark border border-inkDark/15 hover:bg-creamBg transition';
+                } else {
+                    btn.className = isActive
+                        ? 'cat-btn px-4 py-2 rounded-xl text-xs font-extrabold bg-inkDark text-white transition'
+                        : btn.className.replace('bg-inkDark text-white', 'bg-white text-inkDark');
+                }
+            });
+            renderCatalogGrid(cat);
+        }
+
+        function renderCatalogGrid(cat) {
+            const grid = document.getElementById('catalogGrid');
+            const list = cat === 'all' ? CATALOG_ITEMS : CATALOG_ITEMS.filter(item => item.category === cat);
+
+            grid.innerHTML = list.map(item => `
+                <div class="clean-card rounded-3xl p-5 flex flex-col justify-between gap-4 border ${item.borderClass}">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full ${item.cardBg} border ${item.borderClass} text-inkDark">
+                                ${item.badge}
+                            </span>
+                            <span class="text-[11px] font-semibold text-inkMuted">${item.formatLabel}</span>
+                        </div>
+                        <h3 class="font-bold text-base text-inkDark">${item.name}</h3>
+                        <p class="text-xs text-inkMuted leading-relaxed">${item.desc}</p>
+                    </div>
+
+                    <div class="pt-3 border-t border-inkDark/10 flex items-center justify-between">
+                        <span class="font-extrabold text-base text-inkDark">Rp ${item.price.toLocaleString('id-ID')}</span>
+
+                        <button type="button" onclick="selectCatalogToOrder('${item.id}')" class="bg-creamBg hover:bg-[#2B5922] hover:text-white text-inkDark border border-inkDark/10 text-xs">
+                            Pilih Produk
+                        </button>
+                    </div>
+                    </div>
+                `).join('');
+        }
+    </script>
+</body>
+</html>
